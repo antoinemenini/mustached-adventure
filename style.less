@@ -1,0 +1,174 @@
+//@import "font.less";
+@import "colors.less";
+
+@light-blue : #00d6fc;
+
+body{
+    background-color: @background;
+    font-family: "museo-sans";
+}
+
+#container_global{
+    @media (min-width: 980px) {
+        .border-radius-top;
+    }
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 0px rgba(84,84,84,0.3);
+}
+
+#header{
+    background-color: @blue-header;
+    color : #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    margin : 0px;
+    padding: 0px;
+    @media (min-width: 980px) {
+        .border-radius-top;
+    }
+    
+    #header-content{
+        margin : 20px 10px;  
+    }
+}
+
+#content{
+    /* Large desktop */
+    @media (min-width: 1200px) {
+        margin : 20px 0px 20px 100px;
+    }
+    
+    /* default */
+    @media (min-width: 980px) {
+        margin : 20px 0px 20px 70px;
+    }
+     
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 979px) {
+        margin : 20px 0px 20px 50px;
+    }
+     
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) {
+        width : 80%;
+        margin : 20px auto;
+    }
+     
+    /* Landscape phones and down */
+    @media (max-width: 480px) {
+        width : 90%;
+        margin : 20px auto;
+    }
+}
+
+#sidebar{
+    @media (min-width: 1200px) {
+        margin : 20px auto;
+        width : 80%;
+    }
+    
+    /* default */
+    @media (min-width: 980px) {
+        margin : 20px auto;
+        width : 80%;
+    }
+     
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 979px) {
+        margin : 20px auto;
+        width : 90%;
+    }
+     
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) {
+        margin : 20px auto;
+        width : 80%;
+    }
+     
+    /* Landscape phones and down */
+    @media (max-width: 480px) {
+        margin : 20px auto;
+        width : 90%;
+    }
+}
+
+.top-block{
+    height : 40px;
+}
+
+.border-radius(@radius : 4px) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radius-left(@radius : 4px) {
+    -moz-border-radius: @radius 0 0 @radius;
+    -webkit-border-radius: @radius 0 0 @radius;
+    border-radius: @radius 0 0 @radius;
+}
+
+.border-radius-right(@radius : 4px) {
+    -moz-border-radius: 0 @radius @radius 0;
+    -webkit-border-radius: 0 @radius @radius 0;
+    border-radius: 0 @radius @radius 0;
+}
+
+.border-radius-bottom(@radius : 4px){
+    -moz-border-radius: 0 0 @radius @radius;
+    -webkit-border-radius: 0 0 @radius @radius;
+    border-radius: 0 0 @radius @radius;
+}
+
+.border-radius-top(@radius : 4px){
+    -moz-border-radius: @radius @radius 0 0;
+    -webkit-border-radius: @radius @radius 0 0;
+    border-radius: @radius @radius 0 0;
+}
+
+.vert-grad(@start, @end){
+    background-image: -ms-linear-gradient(top, @start, @end);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@start), to(@end));
+    background-image: -webkit-linear-gradient(top, @start, @end);
+    background-image: -o-linear-gradient(top, @start, @end);
+    background-image: linear-gradient(top, @start, @end);
+    background-image: -moz-linear-gradient(top, @start, @end);
+    background-repeat: repeat-x;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    //-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@start, endColorstr=@end)";
+    background-color: mix(@start, @end);
+}
+
+
+
+
+fieldset,img{ border:0;}
+img{ margin: 10px}
+address,caption,cite,code,dfn,var{ font-style:normal; font-weight:normal;}
+ol,ul{ list-style:none;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-size:100%;font-family: "Adelle";}
+q:before,q:after{ content:'';}
+abbr,acronym{ border:0;}
+
+body,button,input,select,textarea{ font-family: "museo-sans",Verdana,sans-serif;}
+a{ color : @red; cursor:pointer; text-decoration:none;}
+a:visited{ color : @red;}
+a:hover{ text-decoration:underline;}
+blockquote{ font-style: italic; }
+/* Classes des images */
+.alignleft{ display:inline; float:left;}
+.aligncenter{ clear:both;	display:block; margin-left:auto; margin-right:auto;}
+.alignright{ display:inline; float:right;}
+.size-auto{ }
+.size-medium{ }
+.size-large{ }
+.size-full{ }
+.wp-caption{ } /* Légende de l'image */
+.wp-caption img{ }
+.gallery{ }
+.gallery .gallery-item{ }
+
+@import "post.less";
+@import "form.less";
