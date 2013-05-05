@@ -10,7 +10,7 @@
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);   
 }
 
-.btn{
+input[type=submit]{
     font-size: 13px;
     font-weight: 100;
     height : 30px;
@@ -28,12 +28,12 @@
     margin : 5px;
 }
 
-.btn:hover{
+input[type=submit]:hover{
     background-color: lighten(#eeeeee, 10%);
     .vert-grad(lighten(#eeeeee, 10%), #eeeeee);
 }
 
-.btn:active{
+input[type=submit]:active{
     .btn-active-shadow;
     .vert-grad(darken(#eeeeee, 5%), #eeeeee);
 }
@@ -43,6 +43,16 @@ input[type=text]{
     font-size: 13px;
     font-weight: 100;
     height : 28px;
+    .border-radius(3px);
+    padding : 0px 5px;
+    margin : 5px;
+}
+
+
+textarea{
+    border : 1px solid darken(#eeeeee, 15%);
+    font-size: 13px;
+    font-weight: 100;
     .border-radius(3px);
     padding : 0px 5px;
     margin : 5px;
